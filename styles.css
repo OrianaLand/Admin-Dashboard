@@ -1,0 +1,51 @@
+/* Light CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/*End of CSS reset*/
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.header {
+    grid-column: 2;
+    background-color: #fff;
+}
+
+.sidebar{
+    grid-row: 1/-1;
+    background-color: #1990D1;
+}
+
+.main{
+    grid-column: 2;
+    background-color: #E2E8F0;
+}
