@@ -8,7 +8,7 @@
 html,
 body {
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 img {
@@ -28,24 +28,90 @@ ol {
 
 /*End of CSS reset*/
 
-.container{
-    height: 100vh;
+:root {
+    --primary-color: #1990D1;
+    --secondary-color: #fff;
+    --complement-color: #E2E8F0;
+}
+
+.container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    height: 100vh;
+    grid-template-rows: 2fr 5fr 5fr;
 }
 
 .header {
-    grid-column: 2;
-    background-color: #fff;
+    background-color: var(--secondary-color)
 }
 
-.sidebar{
-    grid-row: 1/-1;
-    background-color: #1990D1;
+.sidebar {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: var(--secondary-color);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.main{
-    grid-column: 2;
-    background-color: #E2E8F0;
+.sidebar-dashboard {
+    grid-column: 1/-1;
+    margin-bottom: 1rem;
+    font-size: calc(16px + 0.75vw);
+    font-weight: bold;
+}
+
+.sidebar-section {
+    font-size: calc(16px + 0.35vw);
+    font-weight: 600;
+}
+
+.sidebar-section>p {
+    padding-bottom: 1em;
+}
+
+.sidebar>div:not(:first-child) {
+    padding-left: 0.5em;
+}
+
+.fa-solid {
+    color: var(--secondary-color);
+    padding-right: 1em;
+}
+
+.main {
+    background-color: var(--complement-color);
+}
+
+
+@media only screen and (min-width: 750px) {
+    .container {
+        height: 100vh;
+        grid-template-columns: minmax(max-content, 1fr) 4fr;
+        grid-template-rows: 1fr 4fr;
+    }
+
+    .header {
+        grid-column: 2;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-row: 1/-1;
+        padding: 1.5rem;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4fr 4fr;
+        justify-items: start;
+
+    }
+
+    .fa-solid {
+        padding: 0 1.5rem 0.5rem 0;
+    }
+
+    .main {
+        grid-column: 2;
+        background-color: var(--complement-color);
+    }
+
 }
