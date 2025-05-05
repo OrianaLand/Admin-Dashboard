@@ -65,7 +65,8 @@ ol {
     font-weight: 600;
 }
 
-.sidebar-section>p {
+.sidebar-section>a {
+    display: block;
     padding-bottom: 1em;
 }
 
