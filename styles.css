@@ -41,8 +41,34 @@ ol {
 }
 
 .header {
-    background-color: var(--secondary-color)
+    background-color: var(--secondary-color);
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    padding: 1em 2em;
 }
+
+.fa-solid.fa-bell,
+.fa-solid.fa-magnifying-glass {
+    padding: 0;
+    color: #000;
+}
+
+img{
+    border-radius: 50%;
+    height: 5vh;
+}
+
+[type="text"]{
+   width: 40vw; 
+}
+
+.header-greetings{
+    display: flex;
+}
+
 
 .sidebar {
     background-color: var(--primary-color);
@@ -109,6 +135,7 @@ ol {
     .fa-solid {
         padding: 0 1.5rem 0.5rem 0;
     }
+
 
     .main {
         grid-column: 2;
